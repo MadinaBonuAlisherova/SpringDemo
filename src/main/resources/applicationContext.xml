@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:content ="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+    <bean id="archive"
+          class="com.madinabonu.springdemo.Lectures">
+
+    </bean>
+    <bean id="myClass"
+          class = "com.madinabonu.springdemo.MathClass" >
+
+        <constructor-arg ref="archive" />
+    </bean>
+
+<!--    <bean id="english"-->
+<!--    class="com.madinabonu.springdemo.EnglishClass">-->
+
+<!--        &lt;!&ndash;set up setter injections&ndash;&gt;-->
+<!--        <property name="lecture" ref="archive" />-->
+<!--        <property name="email" value="${foo.email}"/>-->
+<!--        <property name="phone" value="${foo.phone}" />-->
+<!--        <property name="tName" value="${foo.tName}" />-->
+<!--    </bean>-->
+
+</beans>
